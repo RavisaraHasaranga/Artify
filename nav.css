@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.navbar a{
+    color: white;
+}
+
+.logo{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 90px;
+    cursor: pointer;
+
+}
+
+.navbar .navlinks ul {
+    display: flex;
+
+}
+.navbar .navlinks ul li{
+    margin: 0 25px;
+    font-size: 20px;
+}
+
+.navbar .navlinks ul li a::after{
+    content:'';
+    width: 0;
+    background: #ffffff;
+    height: 2px;
+    display: block;
+    margin:0;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .navlinks ul li a:hover::after{
+    width: 100%;
+}
+
+
+.navbar .navlinks li.active a {
+    font-weight: 600;
+}
+
+
+.navbar .menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+@media   screen and (max-width:778px){
+    .navbar{
+        padding: 0;
+        
+    }
+    
+    .navbar .logo{
+        
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        
+    
+    }
+
+
+    .navbar .menu-btn{
+        display: block;
+    }
+    
+    .navlinks {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(7px);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+        transition: all 0.3s ease-in-out ;
+       
+
+    }
+
+    
+
+    .navlinks ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        margin-top: 10px; 
+        
+    }
+
+    .navbar .navlinks ul li{
+        margin: 20px 0;
+        font-size: 1.2em;
+       
+
+    }
+
+}
