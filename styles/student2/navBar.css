@@ -39,8 +39,8 @@ body{
 
 }
 .navbar .navlinks ul li{
-    margin: 0 25px;
-    font-size: 20px;
+    margin: 0 20px;
+    font-size: 18px;
 }
 
 .navbar .navlinks ul li a::after{

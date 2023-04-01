@@ -13,7 +13,7 @@ a{
 header{
     height: 100vh ;
     width: 100vw;
-    background-image: url(../images/background2.jpg) ;
+    background-image: url(../../images/background2.jpg) ;
     background-position: bottom;
     background-size:cover;
     display: flex;
@@ -63,4 +63,45 @@ header{
     }
 }
 
-/* navbar */
+/* section */
+
+section{
+    width: 80%;
+    margin: 70px auto;    
+}
+
+.line2{
+    width :100px ;
+    height: 4px;
+    background: crimson;
+    margin: 3px auto;
+    border-radius: 5px;
+
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .image,
+  .description {
+    width: 50%;
+  }
+  
+  .left {
+    text-align: left;
+  }
+  
+  .right {
+    text-align: right;
+  }
