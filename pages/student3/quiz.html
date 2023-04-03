@@ -1,15 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../styles/student3/quiz.css" />
+    <script src="https://kit.fontawesome.com/9a6b3796f9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Ready for a quiz?</h1>
+    <script src="../../js/student3/quiz.js" defer></script>
+    <div class="container">
+
+        <div class="quiz-container" id="quiz">
+            <header>
+                <div class="title">Select appropriate answer</div>
+                <div class="timer">
+                    <div class="timer_left_txt">Time Left</div>
+                    <div class="timer_sec">60</div>
+                </div>
+            </header>
+            <div class="quiz-header">
+                <h2 id="question">Question text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="a" name="answer" class="answer" />
+                        <label id="a_text" for="a">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="b" name="answer" class="answer" />
+                        <label id="b_text" for="b">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c" name="answer" class="answer" />
+                        <label id="c_text" for="c">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d" name="answer" class="answer" />
+                        <label id="d_text" for="d">Question</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn-quiz" id="submit">Next</button>
+        </div>
+        <div class="results-main">
+            <div class="result-container">
+                <!-- <h2>Results</h2> -->
+            </div>
+        </div>
+
+        <div class="editor-container-btn">
+            <a href="EditorStudent3.html">Editor</a>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
 
 </body>
 
