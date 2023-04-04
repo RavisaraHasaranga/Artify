@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #eddcd2; */
+  background-image: url("../../images/student3/undraw_Questions.png");
+  margin: 0 auto;
+  position: relative;
+}
+
+.quiz-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+  width: 600px;
+  max-width: 100%;
+}
+
+.quiz-container header {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 30px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.quiz-container header .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.quiz-container header .timer {
+  color: #fff;
+  background-color: #a5a58d;
+  border: 1px solid #8f8f7c;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+}
+.quiz-container header .timer .timer_left_txt {
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  user-select: none;
+}
+.quiz-container header .timer .timer_sec {
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 45px;
+  color: #000;
+  border-radius: 10px;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #000;
+  user-select: none;
+}
+
+.quiz-header {
+  padding: 2rem;
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+.refresh,
+.btn-quiz {
+  background-color: #a5a58d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 1.3rem;
+}
+
+.btn-quiz:hover {
+  background-color: #7a7a69;
+}
+
+.btn-quiz:focus {
+  background-color: #57574a;
+  outline: none;
+}
+
+/* Container */
+.result-container {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  /* transform: translate(-50%, -45%); */
+  background-color: #eddcd2c5;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1); */
+  /* width: 600px; */
+  /* max-height: 500px; */
+  /* height: 100%;
+  max-width: 100%; */
+  display: none;
+  flex-direction: column;
+  overflow: auto;
+  /* scrollbar-width: none; 
+    -ms-overflow-style: none; */
+}
+.result-container::-webkit-scrollbar {
+  display: none;
+}
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headerTitle > span:nth-child(1) {
+  font-size: 30px;
+  font-weight: 600;
+}
+.headerTitle > span:nth-child(2) {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.result-container header {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 30px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+  padding: 2rem;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item table {
+  width: 100%;
+}
+
+.questions {
+  padding: 10px;
+  background-color: #ffffffee;
+  color: #000;
+  border-radius: 7px;
+}
+.questionAnswers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.correctTag {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.correct {
+  color: green;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.incorrect {
+  color: red;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.editor-container-btn {
+  /* background-color: #2d3436; */
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  margin-left: 20px;
+}
+/* .editor-container-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.editor-container-btn i {
+  color: #dfe6e9;
+  font-size: 20px;
+}
+.editor-container-btn:hover a,
+.editor-container-btn:hover i {
+  color: #55efc4;
+} */
+
+@media screen and (max-width: 500px) {
+  .questionAnswers {
+    padding-top: 1px;
+    flex-direction: column;
+    gap: 1px;
+  }
+}

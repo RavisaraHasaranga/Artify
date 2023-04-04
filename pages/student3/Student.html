@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles//student3/Student.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Details</h1>
+        <div class="image-container">
+            <div class="members">
+                <div class="member">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                        alt="Member 1">
+                    <div class="details">
+                        <h2>Chrismi Kotikawatta</h2>
+                        <p>Role : Student 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="members">
+                <div class="member">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                        alt="Member 1">
+                    <div class="details">
+                        <h2>Ravisara Hasaranga</h2>
+                        <p>Role : Student 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="members">
+                <div class="member">
+                    <img src="../../images/student3/profileEdit.jpg" alt="Member 1">
+                    <div class="details">
+                        <h2>Chathuni Perera</h2>
+                        <p>Role : Student 3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="members">
+                <div class="member">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                        alt="Member 1">
+                    <div class="details">
+                        <h2>Ryan Gunathilaka</h2>
+                        <p>Role : Student 4</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="details-area"></div> -->
+        </div>
+    </div>
+
+    <script>
+        const members = document.querySelectorAll('.member');
+
+        members.forEach(member => {
+            member.addEventListener('mouseenter', () => {
+                const details = member.querySelector('.details');
+            });
+
+            // member.addEventListener('mouseleave', () => {
+            // });
+        });
+    </script>
+
+</body>
+
+</html>
