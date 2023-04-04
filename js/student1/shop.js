@@ -17,6 +17,7 @@ let products = [
     {
         id: 1,
         name: 'MONALISSA',
+        artist: 'Leonardo Da Vinci - 1503-19',
         image: 'image1.jpg',
         price: 50
     },
@@ -47,27 +48,46 @@ let products = [
     {
         id: 6,
         name: 'VIRGIN AND CHILD',
+        
         image: 'image12.jpg',
         price: 60
     },
     {
         id: 7,
+        name: 'THE SWING',
+        image: 'image15.jpg',
+        price: 60
+    },
+    {
+        id: 8,
+        name: 'THE DEATH OF MARAT',
+        image: 'image16.jpg',
+        price: 60
+    },
+    {
+        id: 9,
+        name: 'THE MEETING(FROM THE LOVES OF THE SHEPHERDS',
+        image: 'image17.jpg',
+        price: 60
+    },
+    {
+        id: 10,
         name: 'THE WANDERE ABOVE THE SEA OF FOG',
         image: 'image5.jpg',
         price: 40
         
     },
     {
-        id: 8,
+        id: 11,
         name: 'CHALK CLIFFS ON RIIGEN',
         image: 'image13.jpg',
         price: 45
         
     },
     {
-        id: 9,
-        name: 'ROCKY RAVINE IN THE ELBE SANDATONE MOUNTAINS',
-        image: 'image14.jpg',
+        id: 12,
+        name: 'CAFE TERRACE AT NIGHT',
+        image: 'image20.jpg',
         price: 65
         
     }
@@ -103,7 +123,7 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
+                <div><img src="../../images/student1/${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>$${value.price.toLocaleString()}</div>
                 <div>
@@ -127,3 +147,4 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 }
+

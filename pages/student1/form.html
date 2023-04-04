@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles/student1/form.css">
+  
+  <link rel="icon" type="image/png" href="../../images/student1/logo.png">
+  <title>Artify | Shop</title>
+  
+</head>
+<body>
+  <div class="container">
+    
+    <div class="title">Personal Details</div>
+    <div class="content">
+      <form id="myForm">
+        <c class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input  type="text" id ="first-name" placeholder="First Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" id ="last-name" placeholder="Last Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id ="email" placeholder= "Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Shipping address</span>
+            <input type="text" id ="address" placeholder="Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Apartment</span>
+            <input type="text" id ="address-apartment" placeholder="Apartment, suit, unit (optional)" required>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <input type="text" id ="address-city" placeholder="City" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Country</span>
+            <select id="address-country" required>
+              <option value="">Select a country</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Sri Lanaka">Sri Lanka</option>
+            </select>
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Postal code</span>
+            <input type="tel" id ="postal-code" placeholder=" Postal Code" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" id ="contact-number" placeholder=" Phone Number" required>
+          </div>
+        </c>
+      </form>
+    </div>
+    <div class="title">Payment Method</div>
+    <div class="content">
+      <form id="myForm">
+        <c class="payment-details">
+          <div class="input-box">
+            <span class="details">Card number</span>
+            <input type="tel" id ="card-number" placeholder=" Card Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Cardholder's name</span>
+            <input type="name" id ="cardholder-name" placeholder="Card holder's name" >
+          </div>
+          <div class="input-box">
+            <span class="details">Expiry Date</span>
+            <input type="date" id ="expiry-date"  required>
+          </div>
+          <div class="input-box">
+            <span class="details">Security Code</span>
+            <input type="tel" id ="security-code" placeholder="Security Code" required>
+          </div>             
+          <div class="vertify">
+            <input type="checkbox" id="age" name="age" value="18 above">
+            <label for="age">I confirm that I am over 18</label>
+          </div>
+          
+        </c> 
+      </form>
+      <div class="button-container">
+        <button type="reset" class="reset-button"  value="Clear">Clear</button>
+        <button type="submit" class="submit-button" onclick="openPopup()" value="Place Order">Submit</button>
+
+          <div class="popup" id="popup">
+            <h2>Thank you!</h2>
+            <p>Order placed successfully!</p>
+            <button type="button" onclick="window.location.href='shop.html';">OK</button>
+          </div>
+      </div> 
+
+    </div>
+      
+  </div>
+  
+  <script>
+    let popup=document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+      
+  </script>
+
+</body>
+
+</html>

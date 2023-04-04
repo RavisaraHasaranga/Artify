@@ -1,0 +1,90 @@
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    background-image: url(../../images/student1/background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    
+    
+  }
+  .splash-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.201); /* semi-transparent white */
+    z-index: -1;
+    backdrop-filter: blur(2px); /* apply the blur effect where supported */
+  }
+
+
+  .names{
+    margin-top: 250px;
+    text-decoration: uppercase;
+    font-weight: 600;
+    list-style: none;
+    color: white;
+    justify-content: center;
+    
+  }
+  
+
+
+/*splash screen
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    transition: 2s;
+}
+
+
+.logo-img{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    transition: ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    
+    
+
+}
+.logo-img.active{
+    bottom: 0;
+    opacity: 1;
+    
+    
+}
+.logo-img.fade{
+    bottom: 150px;
+    opacity: 0;
+   
+
+}*/
