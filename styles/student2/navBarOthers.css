@@ -19,11 +19,13 @@ body {
   width: 100%;
   height: 100px;
   box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   align-items: center;
   z-index: 1;
+  background-color: #fff;
 }
 .navbar a {
-  color: white;
+  color: #000;
 }
 
 .logo {
@@ -78,7 +80,7 @@ body {
   display: none;
 }
 .menu-btn i {
-  color: #ffffff;
+  color: #000;
 }
 @media screen and (max-width: 880px) {
   .navbar {
@@ -129,7 +131,7 @@ body {
     width: 100%;
     height: 100vh;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.151);
+    background-color: rgba(255, 255, 255, 0.36);
     backdrop-filter: blur(7px);
     align-items: center;
     display: flex;
@@ -148,6 +150,16 @@ body {
   .navbar .navlinksMobile ul li {
     margin: 20px 0;
     font-size: 1.2em;
+  }
+
+  .navbar .navlinksMobile li.active a {
+    font-weight: 600;
+    color: #ed143d;
+  }
+
+  .navbar .navlinksMobile li a:hover {
+    color: #ed143d;
+    font-weight: 600;
   }
 
   .navbar .navlinksMobile ul li a::after {
