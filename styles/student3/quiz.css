@@ -10,8 +10,8 @@
   width: 100vw;
   height: 100vh;
   font-family: "Poppins", sans-serif;
-  /* background-color: #eddcd2; */
-  background-image: url("../../images/student3/undraw_Questions.png");
+  background-color: #eddcd2;
+  /* background-image: url("../../images/student3/undraw_Questions.png"); */
   margin: 0 auto;
   position: relative;
 }
@@ -47,8 +47,8 @@
 }
 .quiz-container header .timer {
   color: #fff;
-  background-color: #a5a58d;
-  border: 1px solid #8f8f7c;
+  background-color: #ed143d;
+  border: 1px solid #ed143c40;
   height: 45px;
   padding: 0 8px;
   border-radius: 5px;
@@ -102,7 +102,7 @@ ul li label {
 }
 .refresh,
 .btn-quiz {
-  background-color: #a5a58d;
+  background-color: #ed143d;
   border: none;
   color: white;
   cursor: pointer;
@@ -115,11 +115,11 @@ ul li label {
 }
 
 .btn-quiz:hover {
-  background-color: #7a7a69;
+  background-color: #ff002f;
 }
 
 .btn-quiz:focus {
-  background-color: #57574a;
+  background-color: #740015;
   outline: none;
 }
 

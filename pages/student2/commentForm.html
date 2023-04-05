@@ -1,14 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Query</title>
+    <!-- <link rel="stylesheet" href="Query-style.css">
+    <link rel="stylesheet" href="../Nav-bar/nav-style.css"> -->
+    <!-- <script src="https://kit.fontawesome.com/9a6b3796f9.js" crossorigin="anonymous"></script> -->
 </head>
+
 <body>
-    <h1>
-        commentForm
-    </h1>
+
+
+    <div class="Query Wrapper active">
+        <div class="Query-header"> Comment Form </div>
+        <div class="input-content">
+            <div class="textBox">
+                <input type="text" id="name" class="Q-input">
+                <span>Name</span>
+                <div class="error-1 name-error"></div>
+            </div>
+            <div class="textBox">
+                <input type="text" id="email" class="Q-input">
+                <span>Email</span>
+                <div class="error-1 email-error"></div>
+            </div>
+            <div class="textBox">
+                <input type="text" id="subject" class="Q-input">
+                <span>Subject</span>
+                <i class="fa-solid fa-caret-down arrow"></i>
+                <div class="error-2 subject-error"></div>
+            </div>
+            <div class="detailsCon">
+                <textarea id="Details" rows="8" cols="40" class="Q-input"></textarea>
+                <span class="details-span">Details</span>
+                <div class="error-3 details-error"></div>
+            </div>
+        </div>
+
+        <div class="select-box">
+            <div class="options-container ">
+                <div class="options">
+                    <input type="radio" class="radio" id="option-1" name="choices">
+                    <label for="option-1">Option-1</label>
+                </div>
+
+                <div class="options">
+                    <input type="radio" class="radio" id="option-2" name="choices">
+                    <label for="option-2">Option-2</label>
+                </div>
+
+                <div class="options">
+                    <input type="radio" class="radio" id="option-3" name="choices">
+                    <label for="option-3">Option-3</label>
+                </div>
+
+            </div>
+        </div>
+        <button type="button" class="btn-q" id="btn-view">View Query</button>
+
+    </div>
+    <div class="View Wrapper ">
+        <div class="Query-header"> Query Form </div>
+        <div class="view-container">
+            <div class="view-content">
+                <div class="label">Name</div>
+                <p class="content"></p>
+            </div>
+            <div class="view-content">
+                <div class="label">Email</div>
+                <p class="content"> </p>
+            </div>
+
+            <div class="view-content">
+                <div class="label">Subject</div>
+                <p class="content"></p>
+            </div>
+
+            <div class="view-details">
+                <div class="label">Details</div>
+                <textarea class="content" id="details-con" cols="20" rows="6">
+
+                    </textarea>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn-q" id="btn-edit">Edit</button>
+                <button type="submit" class="btn-q" id="btn-send">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="Submit">
+        <div class="icon">
+            <div class="icon-sq">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="icon-txt">
+                Successfully Send
+            </div>
+            <button type="button" class="btn-q" id="btn-ok">Ok</button>
+        </div>
+    </div>
+
+    <div class="editor-container">
+        <a href="editor-page-ganidu/Editor-index.html">Editor</a>
+        <i class="fa-solid fa-arrow-right"></i>
+    </div>
+
+    </div>
+    <script src="../Nav-bar/nav-script.js"></script>
+    <script src="Query-script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
+
 </html>

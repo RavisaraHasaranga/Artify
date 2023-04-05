@@ -24,21 +24,20 @@ navLinks.addEventListener("click", function () {
 window.addEventListener("scroll", function () {
   const scroll = window.scrollY;
   if (scroll > 750) {
-    navbar.style.background = "rgba(255,255,255,0.9)";
+    navbar.style.background = "#FFF";
     navbar.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
     menuBtnIcon.style.color = "#000";
-
-    logo.src = "images/student2/Logo(Black).png";
+    logo.src = "../../images/student2/Logo(Black).png";
     a.forEach((item) => {
       item.style.color = "#000";
     });
   } else {
-    navbar.style.background = "transparent";
-    navbar.style.boxShadow = "none";
-    menuBtnIcon.style.color = "#fff";
-    logo.src = "images/student2/Logo (White).png";
+    navbar.style.background = "#FFF";
+    navbar.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+    menuBtnIcon.style.color = "#000";
+    logo.src = "../../images/student2/Logo(Black).png";
     a.forEach((item) => {
-      item.style.color = "#fff";
+      item.style.color = "#000";
     });
   }
 });
