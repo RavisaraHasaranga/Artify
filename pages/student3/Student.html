@@ -5,71 +5,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/student2/navBarOthers.css" />
     <link rel="stylesheet" href="../../styles//student3/Student.css">
-    <title>Document</title>
-
+    <link rel="icon" type="image/png" href="../../images/student1/Logo(Black).png">
+    <title>Artify | About Us</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Student Details</h1>
-        <div class="image-container">
-            <div class="members">
-                <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                        alt="Member 1">
-                    <div class="details">
-                        <h2>Chrismi Kotikawatta</h2>
-                        <p>Role : Student 1</p>
-                    </div>
+        <nav class="navbar">
+            <a herf="index.html" class="logo">
+                <img src="../../images/student2/Logo(Black).png" />
+            </a>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/student1/shop.html">Shop</a></li>
+                    <li>
+                        <a href="../../pages/student3/quiz.html">Quiz </a>
+                    </li>
+                    <li><a href="../../pages/student2/commentForm.html">Comments</a></li>
+                    <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
+                    <li class="active"><a href="../../pages/student3/Student.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="hidden">
+                <div class="navlinksMobile">
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../pages/student1/shop.html">Shop</a></li>
+                        <li>
+                            <a href="../../pages/student3/quiz.html">Quiz </a>
+                        </li>
+                        <li>
+                            <a href="../../pages/student2/commentForm.html">Comments</a>
+                        </li>
+                        <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
+                        <li class="active"><a href="../../pages/student3/Student.html">About us</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="members">
-                <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                        alt="Member 1">
-                    <div class="details">
-                        <h2>Ravisara Hasaranga</h2>
-                        <p>Role : Student 2</p>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars fa-3x"></i>
+            </div>
+        </nav>
+        <div class="img-box">
+            <h1>Student Details</h1>
+            <div class="image-container">
+                <div class="members">
+                    <div class="member">
+                        <img src="../../images/student1/IMG-20230404-WA0007.jpg" alt="Member 1">
+                        <div class="details">
+                            <h2>Chrismi Kotikawatta</h2>
+                            <p>Role : Student 1</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="members">
-                <div class="member">
-                    <img src="../../images/student3/profileEdit.jpg" alt="Member 1">
-                    <div class="details">
-                        <h2>Chathuni Perera</h2>
-                        <p>Role : Student 3</p>
+                <div class="members">
+                    <div class="member">
+                        <img src="../../images/student2/ravisara.jpg" alt="Member 1">
+                        <div class="details">
+                            <h2>Ravisara Hasaranga</h2>
+                            <p>Role : Student 2</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="members">
-                <div class="member">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                        alt="Member 1">
-                    <div class="details">
-                        <h2>Ryan Gunathilaka</h2>
-                        <p>Role : Student 4</p>
+                <div class="members">
+                    <div class="member">
+                        <img src="../../images/student3/profileEdit.jpg" alt="Member 1">
+                        <div class="details">
+                            <h2>Chathuni Perera</h2>
+                            <p>Role : Student 3</p>
+                        </div>
                     </div>
                 </div>
+                <div class="members">
+                    <div class="member">
+                        <img src="../../images/student4/7-73732_hd-gaming-wallpapers-for-pc.jpg" alt="Member 1">
+                        <div class="details">
+                            <h2>Ryan Gunathilaka</h2>
+                            <p>Role : Student 4</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!-- <div class="details-area"></div> -->
         </div>
     </div>
-
-    <script>
+    <!-- <script>
         const members = document.querySelectorAll('.member');
 
         members.forEach(member => {
             member.addEventListener('mouseenter', () => {
                 const details = member.querySelector('.details');
             });
-
-            // member.addEventListener('mouseleave', () => {
-            // });
         });
-    </script>
-
+    </script> -->
+    <script src="../../js/student2/navBarOthers.js"></script>
 </body>
 
 </html>

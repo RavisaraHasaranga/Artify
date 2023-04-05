@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz</title>
   <link rel="stylesheet" href="../../styles/student3/quiz.css" />
   <link rel="stylesheet" href="../../styles/student2/navBarOthers.css" />
-
+  <link rel="icon" type="image/png" href="../../images/student1/Logo(Black).png">
+  <title>Artify | Quiz</title>
   <script src="https://kit.fontawesome.com/9a6b3796f9.js" crossorigin="anonymous"></script>
 </head>
 
@@ -49,6 +49,13 @@
     </div>
   </nav>
   <div class="container">
+    <div id="QuizRules">
+      <h3>Are you ready for a quiz</h3><br>
+      <p>You have total 7 questions. Hit on the start and try to answer them within the time</p>
+      <p>Good Luck!!</p>
+    </div>
+    <button class="btn-quiz" id="start" onclick="start()">Start</button>
+
     <div class="quiz-container" id="quiz">
       <header>
         <div class="title">Select appropriate answer</div>
@@ -57,31 +64,8 @@
           <div class="timer_sec">60</div>
         </div>
       </header>
-      <div id="QuizRules">
-        <h3>Are you ready for a quiz</h3><br>
-        <p>You have total 7 questions. Hit on the start and try to answer them within the time</p>
-        <p>Good Luck!!</p>
-
-      </div>
       <div id="question-list"></div>
-      <!-- <div class="quiz-header">
-                <h2 id="question">Question text</h2>
-                <ul>
-                    <li>
-                        <input type="radio" id="a" name="answer" class="answer" />
-                        <label id="a_text" for="a">Question</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="b" name="answer" class="answer" />
-                        <label id="b_text" for="b">Question</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="c" name="answer" class="answer" />
-                        <label id="c_text" for="c">Question</label>
-                    </li>
-                </ul>
-            </div> -->
-      <button class="btn-quiz" id="submit" onclick="submit()">Submit</button>
+      <button class="btn-quiz" id="submit" onclick="submit()" style="display: none;">Submit</button>
     </div>
     <div class="results-main">
       <div class="result-container">
@@ -90,7 +74,7 @@
     </div>
 
     <div class="editor-container-btn">
-      <a href="EditorStudent3.html">Editor</a>
+      <a href="EditorStudent3.html">Editor Page</a>
       <i class="fa-solid fa-arrow-right"></i>
     </div>
   </div>

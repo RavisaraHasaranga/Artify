@@ -5,6 +5,10 @@ const navbar = document.querySelector(".navbar");
 const logo = document.querySelector(".logo img");
 const a = document.querySelectorAll(".navbar a");
 const menuBtnIcon = document.querySelector(".menu-btn i");
+const navLinksActive = document.querySelector(".navbar .navlinks li.active a");
+const navLinksActiveMobile = document.querySelector(
+  ".navbar .navlinksMobile li.active a"
+);
 
 // toggle the navigation menu when the menu button is clicked
 menuBtn.addEventListener("click", function () {
@@ -31,6 +35,8 @@ window.addEventListener("scroll", function () {
     a.forEach((item) => {
       item.style.color = "#000";
     });
+    navLinksActive.style.color = "#ed143d";
+    navLinksActiveMobile.style.color = "#ed143d";
   } else {
     navbar.style.background = "#FFF";
     navbar.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
@@ -39,5 +45,7 @@ window.addEventListener("scroll", function () {
     a.forEach((item) => {
       item.style.color = "#000";
     });
+    navLinksActive.style.color = "#ed143d";
+    navLinksActiveMobile.style.color = "#ed143d";
   }
 });
