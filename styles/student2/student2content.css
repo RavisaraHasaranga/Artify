@@ -132,12 +132,13 @@ body{
     position: relative;
     text-align: center;
     color: white;
-    height: 500px;
+    height: 700px;
     overflow: hidden;
 }
 .container img{
     object-fit: cover;
     display: block;
+    width: 100%;
 }
 .container::before {
     content: "";
@@ -181,7 +182,3 @@ body{
     border-radius: 30px;
 }
 
-.img{
-   
-    width: 100%;
-}
