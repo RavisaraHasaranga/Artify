@@ -8,13 +8,21 @@ body{
     position: relative;
     text-align: center;
     color: white;
-    height: 550px;
+    height: 100vh;
     overflow: hidden;
 }
-.container img{
+.image-box{
+    display: flex;
+}
+.image-box img{
+    width: 100%;
+     object-fit: fill;
+     
+}
+/* .container img{
     object-fit: fill;
     display: block;
-}
+} */
 .container::before {
     content: "";
     position: absolute;

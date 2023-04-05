@@ -105,55 +105,91 @@ const c_text = document.getElementById("c_text"); // get the answer text element
 const d_text = document.getElementById("d_text"); // get the answer text element
 const submitBtn = document.getElementById("submit"); // get the submit button element
 
+const questionList = document.getElementById("question-list");
+
 const timeValue = performance.now(); // get the time value
 let score = 0; // set the score to 0
 let myTimer; // set the timer to null
 let count; // set the count to null
 let incremental = 0; // set the incremental to 0
 
-startTimer(60, 0);
+startTimer(20, 0);
 loadQuestion();
 
-function generator() {
-  while (true) {
-    const random = Math.floor(Math.random() * quizData.length);
-    if (data.includes(random) === false) {
-      data.push(random);
-      count = random;
-      incremental += 1;
-      return random;
-    }
-  }
-}
+// function generator() {
+//   while (true) {
+//     const random = Math.floor(Math.random() * quizData.length);
+//     if (data.includes(random) === false) {
+//       data.push(random);
+//       count = random;
+//       incremental += 1;
+//       return random;
+//     }
+//   }
+// }
 
 function loadQuestion() {
-  answerEls.forEach((answerEl) => {
-    answerEl.checked = false;
+  // answerEls.forEach((answerEl) => {
+  //   answerEl.checked = false;
+  // });
+
+  // const question = generator();
+  // console.log(question);
+
+  // const currentQuizData = quizData[question];
+  // console.log(currentQuizData);
+
+  // questionEl.innerText = currentQuizData.question;
+  // a_text.innerText = currentQuizData.a;
+  // b_text.innerText = currentQuizData.b;
+  // c_text.innerText = currentQuizData.c;
+  // d_text.innerText = currentQuizData.d;
+
+  let count = 0;
+
+  quizData.forEach((question) => {
+    questionList.innerHTML += `<div class="quiz-header">
+            <h2 id="question">${question.question}</h2>
+            <ul>
+                <li>
+                    <input type="radio" id="a${count}" name="answer${count}" class="${count}" value="a" onclick="setSelectedValue(${count}, 'a')" />
+                    <label id="a_text" for="a${count}">${question.a}</label>
+                </li>
+                <li>
+                    <input type="radio" id="b${count}" name="answer${count}" class="${count}" value="b" onclick="setSelectedValue(${count}, 'b')" />
+                    <label id="b_text" for="b${count}">${question.b}</label>
+                </li>
+                <li>
+                    <input type="radio" id="c${count}" name="answer${count}" class="${count}" value="c" onclick="setSelectedValue(${count}, 'c')" />
+                    <label id="c_text" for="c${count}">${question.c}</label>
+                </li>
+                <li>
+                    <input type="radio" id="d${count}" name="answer${count}" class="${count}" value="d" onclick="setSelectedValue(${count}, 'd')" />
+                    <label id="d_text" for="d${count}">${question.d}</label>
+                </li>
+            </ul>
+        </div>`;
+
+    count++; // increment the counter
   });
-
-  const question = generator();
-  console.log(question);
-
-  const currentQuizData = quizData[question];
-  console.log(currentQuizData);
-
-  questionEl.innerText = currentQuizData.question;
-  a_text.innerText = currentQuizData.a;
-  b_text.innerText = currentQuizData.b;
-  c_text.innerText = currentQuizData.c;
-  d_text.innerText = currentQuizData.d;
 }
 
-function getSelected() {
-  let answer;
-
-  answerEls.forEach((answerEl) => {
-    if (answerEl.checked) {
-      answer = answerEl.id;
-    }
-  });
-  return answer;
+const setSelectedValue = (count, value) => {
+  console.log(count)
+  console.log(value)
+  quizData[count].user = value;
 }
+
+// function getSelected() {
+//   let answer;
+
+//   answerEls.forEach((answerEl) => {
+//     if (answerEl.checked) {
+//       answer = answerEl.id;
+//     }
+//   });
+//   return answer;
+// }
 
 function startTimer(time, trigger) {
   if (trigger === 0) {
@@ -166,40 +202,54 @@ function startTimer(time, trigger) {
         timeCount.textContent = "0" + addZero;
       }
       if (time < 0) {
+        setScore();
         timeText.textContent = "Time Out";
         clearInterval(myTimer);
         return update("60", score);
       }
     }
   } else if (trigger === 1) {
+    setScore();
     const timeTaken = Math.round((performance.now() - timeValue) / 1000);
     clearInterval(myTimer);
     return update(timeTaken, score);
   }
 }
 
-submitBtn.addEventListener("click", () => {
-  const answer = getSelected();
-  if (incremental < 10) {
-    if (answer) {
-      quizData[count].user = answer;
-      if (answer === quizData[count].correct) {
-        score += 1;
-      }
-      loadQuestion();
-    }
-  } else {
-    if (answer) {
-      quizData[count].user = answer;
-      if (answer === quizData[count].correct) {
-        score += 1;
-      }
-    }
+// submitBtn.addEventListener("click", () => {
+//   const answer = getSelected();
+//   if (incremental < 10) {
+//     if (answer) {
+//       quizData[count].user = answer;
+//       if (answer === quizData[count].correct) {
+//         score += 1;
+//       }
+//       loadQuestion();
+//     }
+//   } else {
+//     if (answer) {
+//       quizData[count].user = answer;
+//       if (answer === quizData[count].correct) {
+//         score += 1;
+//       }
+//     }
 
-    return startTimer(0, 1);
-  }
-});
-console.log(score);
+//     return startTimer(0, 1);
+//   }
+// });
+// console.log(score);
+
+const setScore = () => {
+  quizData.forEach((q) => {
+    if (q.user === q.correct) {
+      score++;
+    }
+  })
+}
+
+const submit = () => {
+  return startTimer(0, 1);
+}
 
 function update(time, scores) {
   document.getElementsByClassName("quiz-container")[0].style.display = "none";
@@ -252,16 +302,14 @@ function update(time, scores) {
                             </span>
                             <span class='correctTag'>
                                 ${userAnswer ? userAnswer : "Time Out"}
-                                ${
-                                  userClass === "correct"
-                                    ? `<span class='correct'>&#10003</span>`
-                                    : ""
-                                }
-                                ${
-                                  userClass === "incorrect"
-                                    ? `<span class='incorrect'>&#10060</span>`
-                                    : ""
-                                }
+                                ${userClass === "correct"
+        ? `<span class='correct'>&#10003</span>`
+        : ""
+      }
+                                ${userClass === "incorrect"
+        ? `<span class='incorrect'>&#10060</span>`
+        : ""
+      }
                             </span>
                         </div>
                         <div class='answers'>
