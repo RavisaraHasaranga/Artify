@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="../../styles/student3/quiz.css" />
-    <link rel="stylesheet" href="../../styles/student2/navBarOthers.css" />
 
-    <script
-      src="https://kit.fontawesome.com/9a6b3796f9.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../../styles/student3/quiz.css" />
+  <link rel="stylesheet" href="../../styles/student2/navBarOthers.css" />
 
-  <body>
-    <nav class="navbar">
-      <a herf="index.html" class="logo">
-        <img src="../../images/student2/Logo(Black).png" />
-      </a>
-      <div class="navlinks">
+  <script src="https://kit.fontawesome.com/9a6b3796f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <a herf="index.html" class="logo">
+      <img src="../../images/student2/Logo(Black).png" />
+    </a>
+    <div class="navlinks">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../pages/student1/shop.html">Shop</a></li>
+        <li class="active">
+          <a href="../../pages/student3/quiz.html">Quiz </a>
+        </li>
+        <li><a href="../../pages/student2/commentForm.html">Comments</a></li>
+        <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
+        <li><a href="../../pages/student3/Student.html">About us</a></li>
+      </ul>
+    </div>
+    <div class="hidden">
+      <div class="navlinksMobile">
         <ul>
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../../pages/student1/shop.html">Shop</a></li>
           <li class="active">
             <a href="../../pages/student3/quiz.html">Quiz </a>
           </li>
-          <li><a href="../../pages/student2/commentForm.html">Comments</a></li>
+          <li>
+            <a href="../../pages/student2/commentForm.html">Comments</a>
+          </li>
           <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
           <li><a href="../../pages/student3/Student.html">About us</a></li>
         </ul>
       </div>
-      <div class="hidden">
-        <div class="navlinksMobile">
-          <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../pages/student1/shop.html">Shop</a></li>
-            <li class="active">
-              <a href="../../pages/student3/quiz.html">Quiz </a>
-            </li>
-            <li>
-              <a href="../../pages/student2/commentForm.html">Comments</a>
-            </li>
-            <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
-            <li><a href="../../pages/student3/Student.html">About us</a></li>
-          </ul>
+    </div>
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars fa-3x"></i>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="quiz-container" id="quiz">
+      <header>
+        <div class="title">Select appropriate answer</div>
+        <div class="timer">
+          <div class="timer_left_txt">Time Left</div>
+          <div class="timer_sec">60</div>
         </div>
+      </header>
+      <div id="QuizRules">
+        <h3>Are you ready for a quiz</h3><br>
+        <p>You have total 7 questions. Hit on the start and try to answer them within the time</p>
+        <p>Good Luck!!</p>
+
       </div>
-      <div class="menu-btn">
-        <i class="fa-solid fa-bars fa-3x"></i>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="quiz-container" id="quiz">
-        <header>
-          <div class="title">Select appropriate answer</div>
-          <div class="timer">
-            <div class="timer_left_txt">Time Left</div>
-            <div class="timer_sec">60</div>
-          </div>
-        </header>
-        <div id="question-list"></div>
-        <!-- <div class="quiz-header">
+      <div id="question-list"></div>
+      <!-- <div class="quiz-header">
                 <h2 id="question">Question text</h2>
                 <ul>
                     <li>
@@ -75,26 +79,23 @@
                         <input type="radio" id="c" name="answer" class="answer" />
                         <label id="c_text" for="c">Question</label>
                     </li>
-                    <li>
-                        <input type="radio" id="d" name="answer" class="answer" />
-                        <label id="d_text" for="d">Question</label>
-                    </li>
                 </ul>
             </div> -->
-        <button class="btn-quiz" id="submit" onclick="submit()">Submit</button>
-      </div>
-      <div class="results-main">
-        <div class="result-container">
-          <!-- <h2>Results</h2> -->
-        </div>
-      </div>
-
-      <div class="editor-container-btn">
-        <a href="EditorStudent3.html">Editor</a>
-        <i class="fa-solid fa-arrow-right"></i>
+      <button class="btn-quiz" id="submit" onclick="submit()">Submit</button>
+    </div>
+    <div class="results-main">
+      <div class="result-container">
+        <!-- <h2>Results</h2> -->
       </div>
     </div>
-    <script src="../../js/student3/quiz.js" defer></script>
-    <script src="../../js/student2/navBarOthers.js"></script>
-  </body>
+
+    <div class="editor-container-btn">
+      <a href="EditorStudent3.html">Editor</a>
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+  </div>
+  <script src="../../js/student3/quiz.js" defer></script>
+  <script src="../../js/student2/navBarOthers.js"></script>
+</body>
+
 </html>
