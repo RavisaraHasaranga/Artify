@@ -32,20 +32,34 @@ body{
     overflow: hidden;
 }
 .container img{
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     display: block;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 .centered h3{
     font-size: 2.4rem;
     color: #ffffff;
     font-weight: 600;
     top: 10px;
+    letter-spacing: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: font-size 0.5s ease-out;
+}
+.centered h3 span{
+    color: #CB997E;
+    letter-spacing: 10px;
+    transition: font-size 0.5s ease-out;
 }
 .top-container{
     display: flex;
@@ -54,17 +68,17 @@ body{
     margin: 20px 0px;
     flex-wrap: wrap;
 }
-.top-box{
+.topbox{
     width: 350px;
-    background-color: #ffffff;
-    border: 1px solid #ececec;
+    background-color: #EDDCD2;
+    border: 1px solid #CB997E;
     margin: 20px;
     border-radius: 30px;
     transition: box-shadow 0.3s ease-in-out;
     position: relative;
 }
-.top-box:hover{
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.topbox:hover{
+    box-shadow: 0 0 10px rgba(203, 153, 126);
 }
 .top-img{
     width: 100%;
@@ -86,7 +100,7 @@ body{
     margin-bottom: 10px;
 }
 .top-text span{
-    color: #f33c3c;
+    color: #CB997E;
     font-size: 0.9rem;
 }
 .top-text .top-title{
@@ -95,7 +109,7 @@ body{
     color: #272727;
 }
 .top-text .top-title:hover{
-    color: #f33c3c;
+    color: #7f7b80;
     transition: all ease 0.3s;
 }
 .top-text p{
@@ -125,19 +139,24 @@ body{
     z-index: 1;
     display: none;
 }
-.popup .content{
+.popup .content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: #fff;
-    width: 550px;
-    height: 600px;
+    background: #EDDCD2;
+    width: 90vw;
+    height: auto;
     z-index: 2;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 30px;
+    overflow-y: auto;
+}
+.popup .content p{
+    color: #000;
+    padding: 2%;
 }
 .popup .content img{
     width: 500px;
@@ -166,11 +185,14 @@ body{
 .popup.active .overlay{
     display: block;
 }
+.popup:not(.active) .overlay{
+    overflow: auto;
+}
 .popup.active .content{
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1); 
 }
-button{
+/* button{
     position: absolute;
     border: none;
     font-size: 0.6rem;
@@ -183,7 +205,7 @@ button{
     background: transparent;
     margin: 0 0.5rem;
     cursor: pointer;
-    color: #000000;
+    color: #ffffff;
     border-color: #000000;
     transition: all 0.5s ease-in-out;
     position: absolute;
@@ -191,13 +213,99 @@ button{
     bottom: 14px;
     left: 48%;
     transform: translateX(-50%);
-    color: #fff;
-}    
+    color: #000000;
+}     */
 button:hover{
     background: transparent;
-    border-color: #000;
-    color: #000;
+    border-color: #A5A58D;
+    color: #A5A58D;
 }
+.dark-mode {
+    --primary-color: #1f2937;
+    --secondary-color: #6b7280;
+    --background-color: #1f2937;
+    --text-color: #f8f9fa;
+}
+
+
+.button-group{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 70%;
+    left: 97%;
+  }
+  #theme-1{
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+  }
+  #theme-2{
+    background-color: #A7A2A9;
+    height: 30px;
+    width: 30px;
+  }
+
+  
+
+  #theme-3{
+    background-color: #08090A;
+    height: 30px;
+    width: 30px;
+  }
+  
+
+
+  .button-group-font{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 70%;
+    left: 94.6%;
+  }
+  #size-1{
+    background-color: #fff;
+    font-size: 10px;
+    height: 30px;
+    width: 30px;
+  }
+  #size-2{
+    background-color: #ffffff;
+    font-size: 17px;
+    height: 30px;
+    width: 30px;
+  }
+  #size-3{
+    background-color: #ffffff;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+  }
+  
+
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+
+  
+  
+  
+  
 @media(max-width:1250px){
     .top-box{
         width: 300px;

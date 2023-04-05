@@ -5,241 +5,328 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../../styles/student4/gallery.css">
-    <link rel="stylesheet" href="../../styles/student4/navBar.css">
-    <link rel="shortcut icon" href="../../styles/student4/Logo (Black).png">
+    <link rel="stylesheet" href="../../styles/student2/navBarOthers.css">
+    <link rel="shortcut icon" href="../../images/student4/Logo (Black).png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Artify | Image Gallery</title>
-    <script src="script.js"></script>
+
+    <script src="../../js/student4/galleryscript.js"></script>
+   
 </head>
-<body>
+<body >
     <nav class="navbar">
-        <a herf="main.html" class="logo"> <img src="../../images/student4/Logo (Black).png" > </a>
+        <a herf="index.html" class="logo">
+          <img src="../../images/student2/Logo(Black).png" />
+        </a>
         <div class="navlinks">
-            <ul>
-                <li class="active"><a href="#">Home</a> </li>
-                <li><a href="#">Shop</a> </li>
-                <li><a href="">Quiz </a> </li>
-                <li><a href="">Comments</a> </li>
-                <li><a href="#">Site Map</a> </li>
-                <li><a href="#">About us</a> </li>
-            </ul>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../pages/student1/shop.html">Shop</a></li>
+            <li class="active">
+              <a href="../../pages/student3/quiz.html">Quiz </a>
+            </li>
+            <li><a href="../../pages/student2/commentForm.html">Comments</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="../../pages/student3/Student.html">About us</a></li>
+          </ul>
         </div>
-    </nav>
+        <div class="hidden">
+          <div class="navlinksMobile">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../pages/student1/shop.html">Shop</a></li>
+              <li class="active">
+                <a href="../../pages/student3/quiz.html">Quiz </a>
+              </li>
+              <li>
+                <a href="../../pages/student2/commentForm.html">Comments</a>
+              </li>
+              <li><a href="#">Site Map</a></li>
+              <li><a href="../../pages/student3/Student.html">About us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars fa-3x"></i>
+        </div>
+      </nav>
     <br>
     <br>
     <br>
+
+
     <section id="top">
         <div class="container">
-            <img src="../../images/student4/Qz8e3f jpeg.jpg" alt="Art">
+            <img src="../../images/student4/R NEW.jpg" alt="Art">
             <div class="centered">
-                <h3>Thumbnail Description</h3>
+                <h3>Thumbnail <span>Description</span></h3>
                 <br>
             </div>
+        </div>
+
+        <div class="button-group">
+            <button id="theme-1"></button>
+            <button id="theme-2"></button>
+            <button id="theme-3"></button>
+        
+          </div><div class="button-group-font">
+            <button id="size-1">A</button>
+            <button id="size-2">A</button>
+            <button id="size-3">A</button>
           </div>
 
+        <script src="../../js/student4/changecolors.js"></script>
+        
+
+        
+        <br>
+        <br>
+     
+     
+
         <div class="top-container">
-            <div class="top-box">
+            
+            <div class="topbox my-class1 " >
+               
                 <div class="top-img">
-                    <img src="../../images/student4/juice-wrld-neon-halo-0b8rx7c4go7xg9jp-0b8rx7c4go7xg9jp.jpg" alt="">
+                    <img src="../../images/student4/Monelissa.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
-                    <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <span class="span">Artify</span>
+                    <a href="#" class="top-title"> Monslissa</a>
+                    <p class="details">Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by
+                        two questions since the day it was made: Who’s the subject and why is she
+                        smiling? A number of theories for the former have been proffered over the years:
+                        That she’s the wife of the Florentine merchant Francesco di Bartolomeo del
+                        Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s
+                        mother, Caterina, conjured from Leonardo's boyhood memories of her; and finally,
+                        that it's a self-portrait in drag. As for that famous smile, its enigmatic quality has
+                        driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of
+                        preternatural calm comports with the idealized landscape behind her, which
+                        dissolves into the distance through Leonardo’s use of atmospheric perspective</p>
+
                     <div class="popup" id="popup-1">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
-                            <h1>Name of the art goes here</h1>
+                            <div class="close-btn" onclick="togglePopup('popup-1')">&times;</div>
+                            <h1 class="top-text">Monslissa</h1>
                             <br>
-                            <img src="../../images/student4/juice-wrld-neon-halo-0b8rx7c4go7xg9jp-0b8rx7c4go7xg9jp.jpg" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <img src="../../images/student4/Monelissa 3.jpg" alt="">
+                            <p class="details">
+                                Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by
+                                two questions since the day it was made: Who’s the subject and why is she
+                                smiling? A number of theories for the former have been proffered over the years:
+                                That she’s the wife of the Florentine merchant Francesco di Bartolomeo del
+                                Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s
+                                mother, Caterina, conjured from Leonardo's boyhood memories of her; and finally,
+                                that it's a self-portrait in drag. As for that famous smile, its enigmatic quality has
+                                driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of
+                                preternatural calm comports with the idealized landscape behind her, which
+                                dissolves into the distance through Leonardo’s use of atmospheric perspective
+                            </p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-1')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="../../images/student4/Qz8e3f jpeg.jpg" alt="">
+                    <img src="../../images/student4/man on a horse 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-2">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-2')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/man on a horse 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-2')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/so many ppl 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-3">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-3')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/so many ppl 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-3')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/art of a woman 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-4">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-4')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/art of a woman 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-4')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/art of a man 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-5">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-5')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/art of a man 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-5')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/art of a woman holding her baby 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-6">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-6')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/art of a woman holding her baby 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-6')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/art of a woman holding her necklace 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-7">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-7')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/art of a woman holding her necklace 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-7')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/art of ppl staring at the ocean 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-8">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-8')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/art of ppl staring at the ocean 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-8')">Read More</button>
                     </div>
                 </div>
             </div>
 
-            <div class="top-box">
+            <div class="topbox">
                 <div class="top-img">
-                    <img src="wp5358465 jpeg.jpg" alt="">
+                    <img src="../../images/student4/art of rocks 2.jpg" alt="">
                 </div>
                 <div class="top-text">
-                    <span>Artify</span>
+                    <span class="span">Artify</span>
                     <a href="#" class="top-title">Name of the art goes here</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
-                    <div class="popup" id="popup-1">
+                    <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum et tempore, ducimus suscipit harum, architecto totam alias a cupiditate culpa explicabo sequi eius quis tempora reprehenderit similique! Eligendi, eos quam!</p>
+                    <div class="popup" id="popup-9">
                         <div class="overlay">
                           <div class="content">
-                            <div class="close-btn" onclick="togglePopup()">&times;</div>
+                            <div class="close-btn" onclick="togglePopup('popup-9')">&times;</div>
                             <h1>Title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
+                            <br>
+                            <img src="../../images/student4/art of rocks 3.jpg" alt="">
+                            <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem consequuntur animi iusto neque quisquam voluptatum deserunt adipisci? Excepturi alias labore voluptate obcaecati, assumenda neque? Temporibus dolor itaque suscipit. Tenetur.</p>
                           </div>
                         </div>
                       
-                        <button onclick="togglePopup()">Read More</button>
+                        <button onclick="togglePopup('popup-9')">Read More</button>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="../../js/student2/navBarOthers.js"></script>
     </section>
 </body>
 </html>
