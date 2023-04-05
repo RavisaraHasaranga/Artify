@@ -1,96 +1,61 @@
 const quizData = [
   {
-    question: "Which is the tallest building in the world?",
-    a: "Burj Khalifa",
-    b: "Shanghai Tower",
-    c: "Abraj Al Bait Clock Tower",
-    d: "One World Trade Center",
-    correct: "a",
-    user: "",
-  },
-  {
-    question: "Which country is known as the 'Land of the Rising Sun'?",
-    a: "China",
-    b: "Japan",
-    c: "South Korea",
-    d: "Vietnam",
-    correct: "b",
-    user: "",
-  },
-  {
-    question: "What is the capital of Australia?",
-    a: "Sydney",
-    b: "Melbourne",
-    c: "Canberra",
-    d: "Brisbane",
+    question: "What artist is known for the sculptures, The Thinker, The Kiss, and The Gates of Hell?",
+    a: "Donatello",
+    b: "Gian Lorenzo Bernini",
+    c: "Auguste Rodin",
     correct: "c",
     user: "",
   },
   {
-    question: "Which country is famous for the Angkor Wat temple complex?",
-    a: "Vietnam",
-    b: "Cambodia",
-    c: "Thailand",
-    d: "Myanmar",
-    correct: "b",
-    user: "",
-  },
-  {
-    question: "What is the currency of Brazil?",
-    a: "Peso",
-    b: "Dollar",
-    c: "Real",
-    d: "Euro",
+    question: "What type of paint commonly used in fine art is the slowest to dry?",
+    a: "Acrylic",
+    b: "Watercolours",
+    c: "Oil",
     correct: "c",
     user: "",
   },
   {
-    question: "What is the highest mountain in Africa?",
-    a: "Mount Kilimanjaro",
-    b: "Mount Everest",
-    c: "Mount Fuji",
-    d: "Mount Aconcagua",
+    question: "What is the largest museum of fine art as defined by available gallery space?",
+    a: "The Louvre",
+    b: "The Hermitage",
+    c: "Metropolitan Museum of Art",
     correct: "a",
     user: "",
   },
   {
-    question: "Which city is known as the 'Eternal City'?",
-    a: "Paris",
-    b: "Rome",
-    c: "Athens",
-    d: "Vienna",
+    question: "Which famous painter made “The Last Supper”?",
+    a: "The Louvre",
+    b: "Leonardo da Vinci",
+    c: "Jackson Pollock",
     correct: "b",
     user: "",
   },
   {
-    question:
-      "What is the famous canal that connects the Atlantic and Pacific oceans?",
-    a: "Suez Canal",
-    b: "Panama Canal",
-    c: "Kiel Canal",
-    d: "Cape Cod Canal",
+    question: "Who painted the “Mona Lisa”?",
+    a: "The Louvre",
+    b: "Leonardo da Vinci",
+    c: "Jackson Pollock",
     correct: "b",
     user: "",
   },
   {
-    question:
-      "Which country is known for the famous safari destination 'Masai Mara'?",
-    a: "Kenya",
-    b: "Tanzania",
-    c: "Uganda",
-    d: "Zimbabwe",
+    question: "What is the most visited museum in the world?",
+    a: "Museé de Louvre, Paris",
+    b: "Musée d’Orsay",
+    c: "Grand Palais",
     correct: "a",
     user: "",
   },
   {
-    question: "What is the famous structure located in Agra, India?",
-    a: "The Eiffel Tower",
-    b: "The Taj Mahal",
-    c: "The Great Wall",
-    d: "The Colosseum",
+    question: "Who invented the color wheel in 1706?",
+    a: "Michelangelo",
+    b: "Sir Isaac Newton.",
+    c: "Thomas Edison",
     correct: "b",
     user: "",
   },
+
 ];
 data = [];
 const answerEls = document.querySelectorAll(".answer"); // get all the answer elements
@@ -102,7 +67,6 @@ const timeCount = document.querySelector(".timer .timer_sec"); // get the time c
 const a_text = document.getElementById("a_text"); // get the answer text element
 const b_text = document.getElementById("b_text"); // get the answer text element
 const c_text = document.getElementById("c_text"); // get the answer text element
-const d_text = document.getElementById("d_text"); // get the answer text element
 const submitBtn = document.getElementById("submit"); // get the submit button element
 
 const questionList = document.getElementById("question-list");
@@ -113,7 +77,7 @@ let myTimer; // set the timer to null
 let count; // set the count to null
 let incremental = 0; // set the incremental to 0
 
-startTimer(20, 0);
+startTimer(60, 0);
 loadQuestion();
 
 // function generator() {
@@ -162,10 +126,6 @@ function loadQuestion() {
                 <li>
                     <input type="radio" id="c${count}" name="answer${count}" class="${count}" value="c" onclick="setSelectedValue(${count}, 'c')" />
                     <label id="c_text" for="c${count}">${question.c}</label>
-                </li>
-                <li>
-                    <input type="radio" id="d${count}" name="answer${count}" class="${count}" value="d" onclick="setSelectedValue(${count}, 'd')" />
-                    <label id="d_text" for="d${count}">${question.d}</label>
                 </li>
             </ul>
         </div>`;
@@ -260,18 +220,18 @@ function update(time, scores) {
   let scoreTitle;
   console.log(scores);
 
-  if (scores == 10) {
+  if (scores == 7) {
     scoreTitle = "Congratulations !! ";
-  } else if (scores < 8 && scores > 4) {
+  } else if (scores < 7 && scores > 3) {
     scoreTitle = "Good Job !";
-  } else if (scores < 5 && scores > 0) {
+  } else if (scores < 4 && scores > 0) {
     scoreTitle = "Keep it Up ! ";
   } else {
     scoreTitle = "Try Again ! ";
   }
   timeRow.innerHTML = `<div class='headerTitle'>
         <span>${scoreTitle}</span>
-        <span>Results : ${scores}/10 marks.</span>
+        <span>Results : ${scores}/7 marks.</span>
         <span>You took ${time} seconds to finish the quiz</span>
     </div>`;
 
