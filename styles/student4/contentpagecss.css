@@ -1,5 +1,5 @@
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23,7 +23,6 @@ section {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
 .topplaceslist {
@@ -40,14 +39,9 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  /* height: 100%; */
-  /* border: 1px solid #CB997E;*/
   padding: 20px;
   padding-bottom: 0px;
   text-align: center;
-  /* overflow: hidden; */
-  /* position: relative; */
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
@@ -65,9 +59,6 @@ section {
   opacity: 1;
 }
 
-
-
-
 .shopbtcontainer {
   display: block;
   height: 40px;
@@ -75,8 +66,6 @@ section {
   margin-bottom: 1%;
   margin-top: 1%;
 }
-
-
 
 .shopbtn {
   width: 100%;
@@ -100,15 +89,12 @@ section {
   border-radius: 30px;
 }
 
-
-
 .anchor-btn-container {
   display: block;
   padding-top: 2%;
   height: 40px;
   width: 20%;
 }
-
 
 .anchor-button {
   width: 100%;
@@ -131,7 +117,7 @@ section {
   background-size: 200% auto;
   background-color: #ae0202;
   color: #fff;
-  border: 2px solid #A5A58D;
+  border: 2px solid #a5a58d;
   text-decoration: none;
   border-radius: 30px;
 }
@@ -144,7 +130,6 @@ section {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
   }
 
   .anchor-btn-container {
@@ -184,8 +169,6 @@ section {
     border-radius: 25px;
   }
 
-
-
   .card2 img {
     width: 100px;
     height: 50%;
@@ -193,7 +176,6 @@ section {
   }
 
   .card2 h2 {
-
     bottom: 0;
     left: 0;
     right: 0;
@@ -203,12 +185,9 @@ section {
     font-size: 20px;
     padding-top: 2%;
     text-align: center;
-
   }
 
-
   .card2 p {
-
     bottom: 0;
     left: 0;
     right: 0;

@@ -1,6 +1,7 @@
 const quizData = [
   {
-    question: "What artist is known for the sculptures, The Thinker, The Kiss, and The Gates of Hell?",
+    question:
+      "What artist is known for the sculptures, The Thinker, The Kiss, and The Gates of Hell?",
     a: "Donatello",
     b: "Gian Lorenzo Bernini",
     c: "Auguste Rodin",
@@ -8,7 +9,8 @@ const quizData = [
     user: "",
   },
   {
-    question: "What type of paint commonly used in fine art is the slowest to dry?",
+    question:
+      "What type of paint commonly used in fine art is the slowest to dry?",
     a: "Acrylic",
     b: "Watercolours",
     c: "Oil",
@@ -16,7 +18,8 @@ const quizData = [
     user: "",
   },
   {
-    question: "What is the largest museum of fine art as defined by available gallery space?",
+    question:
+      "What is the largest museum of fine art as defined by available gallery space?",
     a: "The Louvre",
     b: "The Hermitage",
     c: "Metropolitan Museum of Art",
@@ -55,7 +58,6 @@ const quizData = [
     correct: "b",
     user: "",
   },
-
 ];
 data = [];
 const answerEls = document.querySelectorAll(".answer"); // get all the answer elements
@@ -76,39 +78,13 @@ let score = 0; // set the score to 0
 let myTimer; // set the timer to null
 let count; // set the count to null
 let incremental = 0; // set the incremental to 0
-
-startTimer(60, 0);
-loadQuestion();
-
-// function generator() {
-//   while (true) {
-//     const random = Math.floor(Math.random() * quizData.length);
-//     if (data.includes(random) === false) {
-//       data.push(random);
-//       count = random;
-//       incremental += 1;
-//       return random;
-//     }
-//   }
-// }
+function start() {
+  startTimer(60, 0);
+  loadQuestion();
+  submitBtn.style.display = "block";
+}
 
 function loadQuestion() {
-  // answerEls.forEach((answerEl) => {
-  //   answerEl.checked = false;
-  // });
-
-  // const question = generator();
-  // console.log(question);
-
-  // const currentQuizData = quizData[question];
-  // console.log(currentQuizData);
-
-  // questionEl.innerText = currentQuizData.question;
-  // a_text.innerText = currentQuizData.a;
-  // b_text.innerText = currentQuizData.b;
-  // c_text.innerText = currentQuizData.c;
-  // d_text.innerText = currentQuizData.d;
-
   let count = 0;
 
   quizData.forEach((question) => {
@@ -135,21 +111,10 @@ function loadQuestion() {
 }
 
 const setSelectedValue = (count, value) => {
-  console.log(count)
-  console.log(value)
+  console.log(count);
+  console.log(value);
   quizData[count].user = value;
-}
-
-// function getSelected() {
-//   let answer;
-
-//   answerEls.forEach((answerEl) => {
-//     if (answerEl.checked) {
-//       answer = answerEl.id;
-//     }
-//   });
-//   return answer;
-// }
+};
 
 function startTimer(time, trigger) {
   if (trigger === 0) {
@@ -176,40 +141,28 @@ function startTimer(time, trigger) {
   }
 }
 
-// submitBtn.addEventListener("click", () => {
-//   const answer = getSelected();
-//   if (incremental < 10) {
-//     if (answer) {
-//       quizData[count].user = answer;
-//       if (answer === quizData[count].correct) {
-//         score += 1;
-//       }
-//       loadQuestion();
-//     }
-//   } else {
-//     if (answer) {
-//       quizData[count].user = answer;
-//       if (answer === quizData[count].correct) {
-//         score += 1;
-//       }
-//     }
-
-//     return startTimer(0, 1);
-//   }
-// });
-// console.log(score);
-
 const setScore = () => {
   quizData.forEach((q) => {
     if (q.user === q.correct) {
       score++;
     }
-  })
-}
+  });
+};
 
 const submit = () => {
-  return startTimer(0, 1);
-}
+  incremental = 0;
+  quizData.forEach((q) => {
+    if (q.user !== "") {
+      incremental++;
+    }
+  });
+  if (incremental < 7) {
+    alert("Please answer all the questions");
+    return;
+  } else {
+    return startTimer(0, 1);
+  }
+};
 
 function update(time, scores) {
   document.getElementsByClassName("quiz-container")[0].style.display = "none";
@@ -262,14 +215,16 @@ function update(time, scores) {
                             </span>
                             <span class='correctTag'>
                                 ${userAnswer ? userAnswer : "Time Out"}
-                                ${userClass === "correct"
-        ? `<span class='correct'>&#10003</span>`
-        : ""
-      }
-                                ${userClass === "incorrect"
-        ? `<span class='incorrect'>&#10060</span>`
-        : ""
-      }
+                                ${
+                                  userClass === "correct"
+                                    ? `<span class='correct'>&#10003</span>`
+                                    : ""
+                                }
+                                ${
+                                  userClass === "incorrect"
+                                    ? `<span class='incorrect'>&#10060</span>`
+                                    : ""
+                                }
                             </span>
                         </div>
                         <div class='answers'>
