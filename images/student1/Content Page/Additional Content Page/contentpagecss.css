@@ -1,0 +1,291 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #f0f0f0;
+}
+
+.bottomToTop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: black;
+  z-index: 10;
+}
+
+.upButton {
+  font-size: 50px;
+  background-color: rgb(154, 154, 164);
+  color: black;
+}
+
+.upButton:hover {
+  color: whitesmoke;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #CB997E;
+    padding: 20px;
+    padding-bottom: 0px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #EDDCD2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    border-radius: 25px;
+  }
+  
+  .card2 img {
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  
+  .card2 h2 {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #EDDCD2;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 2%;
+    text-align: center;
+   
+  }
+  
+  .card2 p {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #EDDCD2;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+  
+  .card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card2 .description {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 2;
+  }
+  
+  .card2:hover .description {
+    opacity: 1;
+  }
+  
+  
+  .topplaceslist {
+    display: grid;
+    grid-template-columns: repeat(1, 85%);
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .shopbtcontainer {
+    display: block;
+    height: 40px;
+    width: 20%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+  }
+  
+  
+  
+  .shopbtn{
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    background-color: #EDDCD2;
+    color: #000000;
+    border: 2px solid #000000; 
+    text-decoration: none;
+    border-radius: 30px;
+    }
+    
+    .shopbtn:hover {
+      outline: none;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #A5A58D;
+      border: 1px solid #A5A58D;
+      border-radius: 30px;    
+    }
+
+    .anchors-containers {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        height: 300px;
+        margin-top: 2%;
+       margin-bottom: 2%;
+    }
+
+  .anchor-btn-container {
+    display: block;
+    padding-top: 2%;
+    height: 40px;
+    width: 20%;
+  }
+
+
+  .anchor-button {
+      width: 100%;
+      height: 40px;
+      font-size: 13px;
+      background-color: #f0f0f0;
+      color: #000000;
+      border: 2px solid #000000; 
+      text-decoration: none;
+      border-radius: 30px;
+      margin-top: 50px;
+  }
+  .anchor-button:hover {
+      width: 100%;
+      height: 40px;
+      font-size: 13px;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #A5A58D;
+      border: 2px solid #A5A58D; 
+      text-decoration: none;
+      border-radius: 30px;
+  }
+
+
+    .anchors {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        align-items: center;
+       
+    }
+
+
+    @media (max-width: 767px) {
+        .anchors {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+           
+        }
+        .anchor-button {
+            width: 100%;
+            height: 40px;
+            font-size: 13px;
+            background-color: #f0f0f0;
+            color: #000000;
+            border: 2px solid #000000; 
+            text-decoration: none;
+            border-radius: 5px;
+          
+            
+          }
+
+          .card2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height: 95%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            border-radius: 25px;
+          }
+          
+          
+          .card2 img {
+            width: 100%;
+            height: 50%;
+
+            border-radius: 25px;
+          }
+          
+          .card2 h2 {
+            
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            font-size: 20px;
+          padding-top: 2%;
+            text-align: center;
+           
+          }
+          
+          
+          .card2 p {
+           
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            color: rgb(0, 0, 0);
+            font-weight: 300;
+            font-size: 15px;
+            padding-top: 2%;
+            padding-left: 2%;
+            padding-right: 2%;
+            text-align: center;
+            padding-bottom: 15%;
+          }
+
+          .shopbtn{
+            width: 100%;
+            height: 40px;
+            font-size: 13px;
+            background-color: #f0f0f0;
+            color: #000000;
+            border: 2px solid #000000; 
+            text-decoration: none;
+            border-radius: 5px;
+            }
+    }
