@@ -262,3 +262,12 @@ header .shopping span {
 .listCard .count {
   margin: 0 10px;
 }
+
+.editor-container-btn {
+  /* background-color: #2d3436; */
+  position: absolute;
+  padding: 20px;
+  font-size: 25px;
+  margin-left: 20px;
+  
+}
