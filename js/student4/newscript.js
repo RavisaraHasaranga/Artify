@@ -1,5 +1,3 @@
-let btnBack = document.querySelector('button');
-
-btnBack.addEventListener('click', () => {
+document.getElementById('back-btn').addEventListener('click',()=>{
     window.history.back();
-});
+})
