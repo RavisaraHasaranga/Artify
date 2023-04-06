@@ -2,30 +2,30 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .sitemap {
-    width: 1024px;
-    margin-bottom: 27px;
-    margin-right: auto;
-    margin-left: 20%;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto 27px;
+    padding: 0 20px;
 }
 .site-map {
-    height: 950px;
-    width: 1024px;
+    height: 850px;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .link_button {
     fill: transparent;
-    stroke: #A5A58D;
+    stroke: #ed143d;
     stroke-width: 3px;
-	text-align : center;
+    text-align: center;
     color: black;
-    border-radius: 10px;
 }
 .link_button:hover {
     background: transparent;
     background-color:#ffffff;
 }
 svg .link_button:hover text {
-    fill: #CB997E;
+    fill: #ae0202;
     transition: all 0.3s ease-in-out 0s;
 }
 svg text {
@@ -37,7 +37,7 @@ svg text {
     font-weight: normal;
 }
 .sitemap-line {
-    stroke:#A5A58D;
+    stroke:#ed143d;
     stroke-width: 4px;
 }
 .container {
@@ -71,4 +71,56 @@ svg text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.editor-btn {
+    text-align: center;
+    margin-top: 50px;
+}
+  
+.editor-btn a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ed143d;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+  
+.editor-btn a:hover {
+    background-color: #ae0202;
+}
+
+@media screen and (max-width: 767px) {
+    .sitemap {
+        margin-left: 10%;
+        padding: 0;
+    }
+    
+    .site-map {
+        height: auto;
+        margin: 0;
+        max-width: none;
+    }
+    
+    svg text {
+        font-size: 18px;
+    }
+    
+    .centered h3 {
+        font-size: 1.8rem;
+        letter-spacing: 15px;
+    }
+    
+    .editor-btn {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sitemap {
+        margin-left: 15%;
+        padding: 0;
+    }
 }
