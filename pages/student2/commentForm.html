@@ -2,114 +2,160 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Query</title>
-    <!-- <link rel="stylesheet" href="Query-style.css">
-    <link rel="stylesheet" href="../Nav-bar/nav-style.css"> -->
-    <!-- <script src="https://kit.fontawesome.com/9a6b3796f9.js" crossorigin="anonymous"></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/student2/comment.css" />
+    <link rel="stylesheet" href="../../styles/student2/navBarOthers.css" />
+    <link rel="icon" type="image/png" href="../../images/student1/Logo(Black).png">
+    <title>Artify | Comments</title>
+    <script src="https://kit.fontawesome.com/9a6b3796f9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-
-    <div class="Query Wrapper active">
-        <div class="Query-header"> Comment Form </div>
-        <div class="input-content">
-            <div class="textBox">
-                <input type="text" id="name" class="Q-input">
-                <span>Name</span>
-                <div class="error-1 name-error"></div>
-            </div>
-            <div class="textBox">
-                <input type="text" id="email" class="Q-input">
-                <span>Email</span>
-                <div class="error-1 email-error"></div>
-            </div>
-            <div class="textBox">
-                <input type="text" id="subject" class="Q-input">
-                <span>Subject</span>
-                <i class="fa-solid fa-caret-down arrow"></i>
-                <div class="error-2 subject-error"></div>
-            </div>
-            <div class="detailsCon">
-                <textarea id="Details" rows="8" cols="40" class="Q-input"></textarea>
-                <span class="details-span">Details</span>
-                <div class="error-3 details-error"></div>
+    <nav class="navbar">
+        <a herf="index.html" class="logo">
+            <img src="../../images/student2/Logo(Black).png" />
+        </a>
+        <div class="navlinks">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../pages/student1/shop.html">Shop</a></li>
+                <li>
+                    <a href="../../pages/student3/quiz.html">Quiz </a>
+                </li>
+                <li class="active"><a href="../../pages/student2/commentForm.html">Comments</a></li>
+                <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
+                <li><a href="../../pages/student3/Student.html">About us</a></li>
+            </ul>
+        </div>
+        <div class="hidden">
+            <div class="navlinksMobile">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../pages/student1/shop.html">Shop</a></li>
+                    <li>
+                        <a href="../../pages/student3/quiz.html">Quiz </a>
+                    </li>
+                    <li class="active">
+                        <a href="../../pages/student2/commentForm.html">Comments</a>
+                    </li>
+                    <li><a href="../../pages/student4/sitemap.html">Site Map</a></li>
+                    <li><a href="../../pages/student3/Student.html">About us</a></li>
+                </ul>
             </div>
         </div>
-
-        <div class="select-box">
-            <div class="options-container ">
-                <div class="options">
-                    <input type="radio" class="radio" id="option-1" name="choices">
-                    <label for="option-1">Option-1</label>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars fa-3x"></i>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="comment-container">
+            <h1>Comment Form</h1>
+            <form id="comment-form">
+                <div class="questions">
+                    <label for="rating">Q1. How satisfied were you with our website today?</label>
+                    <div class="radio-flex">
+                        <div>
+                            <input type="radio" id="rating-0" name="rating" value="0" checked>
+                            <label for="rating-0">0</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-1" name="rating" value="1">
+                            <label for="rating-1">1</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-2" name="rating" value="2">
+                            <label for="rating-2">2</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-3" name="rating" value="3">
+                            <label for="rating-3">3</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-4" name="rating" value="4">
+                            <label for="rating-4">4</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-5" name="rating" value="5">
+                            <label for="rating-5">5</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-6" name="rating" value="6">
+                            <label for="rating-6">6</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-7" name="rating" value="7">
+                            <label for="rating-7">7</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-8" name="rating" value="8">
+                            <label for="rating-8">8</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-9" name="rating" value="9">
+                            <label for="rating-9">9</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating-10" name="rating" value="10">
+                            <label for="rating-10">10</label>
+                        </div>
+                    </div>
+                    <div class="error" id="q1Error">
+                        <p>Please select a rating</p>
+                    </div>
                 </div>
 
-                <div class="options">
-                    <input type="radio" class="radio" id="option-2" name="choices">
-                    <label for="option-2">Option-2</label>
+                <div class="questions">
+                    <label for="reasons">Q2. Please could you tell us your reasons for giving this rating?</label>
+                    <textarea id="reasons" name="reasons" class="inputFieldTextArea"
+                        placeholder="Please enter your reasons here..."></textarea>
+                    <div class="error" id="q2Error">
+                        <p>Please enter your reasons</p>
+                    </div>
                 </div>
 
-                <div class="options">
-                    <input type="radio" class="radio" id="option-3" name="choices">
-                    <label for="option-3">Option-3</label>
+                <div class="questions">
+                    <label for="task">Q3. How did you want to complete this task today?</label>
+                    <select id="task" name="task" class="inputField">
+                        <option value="">Select an option</option>
+                        <option value="easily">Easily</option>
+                        <option value="with some difficulty">With some difficulty</option>
+                        <option value="with a lot of difficulty">With a lot of difficulty</option>
+                        <option value="did not complete">Did not complete</option>
+                    </select>
+                    <div class="error" id="q3Error">
+                        <p>Please select an option</p>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-        <button type="button" class="btn-q" id="btn-view">View Query</button>
+                <div class="questions">
+                    <label for="preference">Q4. If you had to complete this task again, how would you prefer to do
+                        it?</label>
+                    <select id="preference" name="preference" class="inputField">
+                        <option value="">Select an option</option>
+                        <option value="same way">The same way</option>
+                        <option value="differently">Differently</option>
+                        <option value="not at all">Not at all</option>
+                    </select>
+                    <div class="error" id="q4Error">
+                        <p>Please select an option</p>
+                    </div>
+                </div>
 
-    </div>
-    <div class="View Wrapper ">
-        <div class="Query-header"> Query Form </div>
-        <div class="view-container">
-            <div class="view-content">
-                <div class="label">Name</div>
-                <p class="content"></p>
-            </div>
-            <div class="view-content">
-                <div class="label">Email</div>
-                <p class="content"> </p>
-            </div>
+                <div class="questions">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="Enter the Email" name="email" class="inputField">
+                    <div class="error" id="emailError">
+                        <p>Please enter a valid email address</p>
+                    </div>
+                </div>
 
-            <div class="view-content">
-                <div class="label">Subject</div>
-                <p class="content"></p>
-            </div>
-
-            <div class="view-details">
-                <div class="label">Details</div>
-                <textarea class="content" id="details-con" cols="20" rows="6">
-
-                    </textarea>
-            </div>
-            <div class="btn-container">
-                <button type="button" class="btn-q" id="btn-edit">Edit</button>
-                <button type="submit" class="btn-q" id="btn-send">Submit</button>
-            </div>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
-    <div class="Submit">
-        <div class="icon">
-            <div class="icon-sq">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="icon-txt">
-                Successfully Send
-            </div>
-            <button type="button" class="btn-q" id="btn-ok">Ok</button>
-        </div>
-    </div>
-
-    <div class="editor-container">
-        <a href="editor-page-ganidu/Editor-index.html">Editor</a>
-        <i class="fa-solid fa-arrow-right"></i>
-    </div>
-
-    </div>
-    <script src="../Nav-bar/nav-script.js"></script>
-    <script src="Query-script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../../js/student2/comment.js" defer></script>
+    <script src="../../js/student2/navBarOthers.js"></script>
 </body>
 
 </html>

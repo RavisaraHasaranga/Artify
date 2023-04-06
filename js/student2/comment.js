@@ -1,151 +1,98 @@
-'use strict';
+// Get the form and submit button elements
+const form = document.querySelector("#comment-form");
+const submitButton = document.querySelector('input[type="submit"]');
+const email = document.getElementById("emailError");
+const q1Error = document.getElementById("q1Error");
+const q2Error = document.getElementById("q2Error");
+const q3Error = document.getElementById("q3Error");
+const q4Error = document.getElementById("q4Error");
 
-let query = document.querySelector('.Query');
-let view = document.querySelector('.View');
-let submit = document.querySelector('.Submit');
+// Email address to send the form data to
+const emailAddress = "ravisarahdodampegamage@gmail.com"; // before: first time submit
 
-let input_data = document.querySelectorAll('.Q-input');
-let arrow = document.querySelector('.arrow');
-let selectBox = document.querySelector('.select-box');
-let options = document.querySelectorAll('.options');
-let subjectValue = document.getElementById('subject');
+// Function to handle form submission
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
 
-let viewBtn = document.getElementById('btn-view');
+  // Get the form data
+  const formData = new FormData(form);
 
-let name = document.getElementById('name');
-let email = document.getElementById('email');
-let subject = document.getElementById('subject');
-let details = document.getElementById('Details');
-let disable_textArea = document.getElementById('details-con');
-disable_textArea.disabled = true;
+  if (formData.get("email") == "") {
+    email.style.display = "block";
+    return;
+  } else {
+    email.style.display = "none";
+  }
+  if (formData.get("rating") == "") {
+    q1Error.style.display = "block";
+    return;
+  } else {
+    q1Error.style.display = "none";
+  }
+  if (formData.get("reasons") == "") {
+    q2Error.style.display = "block";
+    return;
+  } else {
+    q2Error.style.display = "none";
+  }
+  if (formData.get("task") == "") {
+    q3Error.style.display = "block";
+    return;
+  } else {
+    q3Error.style.display = "none";
+  }
+  if (formData.get("preference") == "") {
+    q4Error.style.display = "block";
+    return;
+  } else {
+    q4Error.style.display = "none";
+  }
 
-let nameError = document.querySelector('.name-error');
-let emailError = document.querySelector('.email-error');
-let subjectError = document.querySelector('.subject-error');
-let detailsError = document.querySelector('.details-error');
+  // Build the email message
+  const message =
+    `Comment Form\n\n` +
+    `New comment from ${formData.get("email")}:\n\n` +
+    `Q1. How satisfied were you with our website today? \nQ1 Answer: ${formData.get(
+      "rating"
+    )}/10\n` +
+    `Q2. Please could you tell us your reasons for giving this rating? \nQ2 Answer: ${formData.get(
+      "reasons"
+    )}\n` +
+    `Q3. How did you want to complete this task today? \nQ3 Answer: ${formData.get(
+      "task"
+    )}\n` +
+    `Q4. If you had to complete this task again, how would you prefer to do it? \nQ4 Answer: ${formData.get(
+      "preference"
+    )}\n`;
 
-let content = document.querySelectorAll('.content');
-let editBtn = document.getElementById('btn-edit');
-let submitBtn = document.getElementById('btn-send');
-let okBtn = document.getElementById('btn-ok');
-
-function blurEffect(data, data_span) {
-    if (data.value !== "") {
-        data_span.setAttribute('id', 'set-span');
-    } else {
-        data_span.removeAttribute('id', 'set-span');
-    }
-}
-
-input_data.forEach((data) => {
-    data.addEventListener('blur', () => {
-        let data_span = data.nextElementSibling;
-        blurEffect(data, data_span);
+  // Send the email
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", `https://formsubmit.co/${emailAddress}`);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.send(
+    JSON.stringify({
+      message: message,
     })
-});
+  );
 
-function dropdownEffect() {
-    if (selectBox.classList.contains('active')) {
-        selectBox.classList.remove('active');
-    } else {
-        selectBox.classList.add('active');
-    }
+  // Disable the submit button and show a success message
+  submitButton.disabled = true;
+  form.innerHTML = `<div class="confirmation">
+  <img src="../../images/student2/Logo(Black).png" alt="loading" />
+  <p>Thank you for your feedback!</p>
+  <p>Redirecting to the home page...</p>
+  <p>Wait 5 seconds</p> 
+  </div>`;
+  // open blank page after submit target="_blank" waiting for 5 seconds
+  setTimeout(function () {
+    window.open(
+      "https://formsubmit.co/confirm/f96c8df616c815601144e4ecadfa2e13",
+      "_blank"
+    );
+    window.location.href = "../../pages/student2/commentForm.html";
+  }, 5000);
 }
 
-arrow.addEventListener('click', () => {
-    dropdownEffect();
-});
-
-options[0].addEventListener('click', () => {
-    subjectValue.value = "Option-1";
-    blurEffect(input_data[2], input_data[2].nextElementSibling);
-    dropdownEffect();
-});
-options[1].addEventListener('click', () => {
-    subjectValue.value = "Option-2";
-    blurEffect(input_data[2], input_data[2].nextElementSibling);
-    dropdownEffect();
-});
-options[2].addEventListener('click', () => {
-    subjectValue.value = "Option-3";
-    blurEffect(input_data[2], input_data[2].nextElementSibling);
-    dropdownEffect();
-});
-
-
-viewBtn.addEventListener('click', () => {
-    let emailCheck = !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value));
-    let msg = "Please fill the form correctly!!";
-    if (name.value.length === 0 || emailCheck || subject.value.length === 0 || details.value.length === 0) {
-        if (name.value.length === 0) {
-            nameError.innerHTML = "<i class=\"fa-solid fa-xmark cross\"></i>"
-            msg += "\n Name field is empty";
-        } else {
-            nameError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-        }
-
-        if (subject.value.length === 0) {
-            subjectError.innerHTML = "<i class=\"fa-solid fa-xmark cross\"></i>"
-            msg += "\n Subject field is empty";
-        } else {
-            subjectError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-        }
-
-        if (email.value.length === 0) {
-            msg += "\n Email field is empty"
-            emailError.innerHTML = "<i class=\"fa-solid fa-xmark cross\"></i>"
-        } else if (emailCheck) {
-            msg += "\n Email format is invalid"
-            emailError.innerHTML = "<i class=\"fa-solid fa-xmark cross\"></i>"
-        } else {
-            emailError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-        }
-
-        if (details.value.length === 0) {
-            detailsError.innerHTML = "<i class=\"fa-solid fa-xmark cross\"></i>"
-            msg += "\n Details field is empty";
-        } else {
-            detailsError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-        }
-        alert(msg);
-    } else {
-        query.classList.remove('active');
-        content[0].textContent = name.value;
-        content[1].textContent = email.value;
-        content[2].textContent = subject.value;
-        content[3].textContent = details.value;
-
-        view.classList.add('active');
-    }
-});
-
-editBtn.addEventListener('click', () => {
-    view.classList.remove('active');
-    query.classList.add('active');
-    nameError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-    subjectError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-    emailError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-    detailsError.innerHTML = "<i class=\"fa-solid fa-check tick\"></i>"
-})
-
-submitBtn.addEventListener("click", () => {
-    view.classList.remove('active');
-    submit.classList.add('active');
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "smurfslpushpe@gmail.com",
-        Password: "5BB571E6627E5CEDD2108439267B70E59EF3",
-        To: 'smurfslpushpe@gmail.com',
-        From: "smurfslpushpe@gmail.com",
-        Subject: "Query form Mail",
-        Body: "Query Form ==> \n" +
-            `Name    : ${name.value}\n` +
-            `Email   : ${email.value}\n` +
-            `Subject : ${subject.value}\n` +
-            `Details : ${details.value}\n`
-    });
-})
-
-okBtn.addEventListener('click', () => {
-    window.location.reload();
-})
+// Attach the handleSubmit function to the form submit event
+form.addEventListener("submit", handleSubmit);
