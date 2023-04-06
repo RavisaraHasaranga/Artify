@@ -82,7 +82,8 @@ function handleSubmit(event) {
   <img src="../../images/student2/Logo(Black).png" alt="loading" />
   <p>Thank you for your feedback!</p>
   <p>Redirecting to the home page...</p>
-  <p>Wait 5 seconds</p> 
+  <p>Wait 5 seconds</p>
+  <a style="display:none"  href="../../pages/student2/commentForm.html">Click here to Return Comment Page</a> 
   </div>`;
   // open blank page after submit target="_blank" waiting for 5 seconds
   setTimeout(function () {
@@ -90,7 +91,10 @@ function handleSubmit(event) {
       "https://formsubmit.co/confirm/f96c8df616c815601144e4ecadfa2e13",
       "_blank"
     );
-    window.location.href = "../../pages/student2/commentForm.html";
+    setTimeout(function () {
+      form.querySelector("a").style.display = "block";
+      // window.location.href = "../../pages/student2/commentForm.html";
+    }, 2000);
   }, 5000);
 }
 

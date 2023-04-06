@@ -157,6 +157,7 @@ input[type="submit"]:hover {
 .confirmation {
   margin-bottom: 10px;
   text-align: center;
+  align-self: center;
 }
 .confirmation p:nth-child(2) {
   color: green;
@@ -178,3 +179,23 @@ input[type="submit"]:hover {
   transition: 0.8s;
   transform: translateY(1px);
 }
+
+.confirmation a {
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  transition: 1.1s;
+  transform: translateY(1px);
+  background-color: #ed143d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 400px;
+}
+
+.confirmation a:hover {
+  background-color: #52000f;
+}
+
