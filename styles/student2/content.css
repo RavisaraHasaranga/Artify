@@ -13,7 +13,7 @@ a {
 header {
   height: 100vh;
   width: 100%;
-  background-image: url(/images/student2/background2.jpg);
+  background-image: url(../../images/student2/background2.jpg);
   background-position: bottom;
   background-size: cover;
   display: flex;
